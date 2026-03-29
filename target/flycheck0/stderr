@@ -1,5 +1,5 @@
-   0.064065500s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint: fingerprint error for git v0.1.0 (C:\Users\Yaqoob\rust\git)/Check { test: false }/TargetInner { name: "git", doc: true, ..: with_path("C:\\Users\\Yaqoob\\rust\\git\\src\\main.rs", Edition2024) }
-   0.065219300s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Yaqoob\rust\git\target\debug\.fingerprint\git-4c80cbbbee8bca34\bin-git`
+   0.139204600s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint: fingerprint error for git v0.1.0 (C:\Users\Yaqoob\rust\git)/Check { test: false }/TargetInner { name: "git", doc: true, ..: with_path("C:\\Users\\Yaqoob\\rust\\git\\src\\main.rs", Edition2024) }
+   0.139260000s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Yaqoob\rust\git\target\debug\.fingerprint\git-4a0a7f3f4f43710a\bin-git`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -26,8 +26,8 @@ Stack backtrace:
   18: git_midx_writer_dump
   19: BaseThreadInitThunk
   20: RtlUserThreadStart
-   0.100336500s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint: fingerprint error for git v0.1.0 (C:\Users\Yaqoob\rust\git)/Check { test: true }/TargetInner { name: "git", doc: true, ..: with_path("C:\\Users\\Yaqoob\\rust\\git\\src\\main.rs", Edition2024) }
-   0.100389700s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Yaqoob\rust\git\target\debug\.fingerprint\git-a5d30514e7e4b353\test-bin-git`
+   0.172321300s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint: fingerprint error for git v0.1.0 (C:\Users\Yaqoob\rust\git)/Check { test: true }/TargetInner { name: "git", doc: true, ..: with_path("C:\\Users\\Yaqoob\\rust\\git\\src\\main.rs", Edition2024) }
+   0.172351800s  INFO prepare_target{force=false package_id=git v0.1.0 (C:\Users\Yaqoob\rust\git) target="git"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Yaqoob\rust\git\target\debug\.fingerprint\git-56f22362cde7df0f\test-bin-git`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -55,4 +55,6 @@ Stack backtrace:
   19: BaseThreadInitThunk
   20: RtlUserThreadStart
     Checking git v0.1.0 (C:\Users\Yaqoob\rust\git)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.82s
+error: could not compile `git` (bin "git" test) due to 3 previous errors; 3 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `git` (bin "git") due to 3 previous errors; 3 warnings emitted

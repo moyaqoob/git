@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+anywhere = "0.0.1"
+clap = { version = "4.6.0", features = ["derive"] }
+flate2 = "1.1.9"
+zlib-rs = "0.6.3"
