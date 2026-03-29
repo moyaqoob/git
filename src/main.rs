@@ -1,4 +1,5 @@
 
+use std::fs::File;
 use std::{fmt::format, fs};
 use anywhere::Context;
 use clap::{Parser, Subcommand,command};
@@ -36,15 +37,18 @@ fn main(){
             fs::write(".git/HEAD", "ref: refs/heads/main\n").unwrap();
          }
          Command::CatFile {pretty_print,object_hash}=>{
-            let mut f = std::fs::File::open(format!(
+            let path = format!(
                 ".git/objects/{}/{}",
-                &object_hash[2..],
-                &object_hash[..2]
-            )).context("open in .git/objects");
-            let mut z = ZlibDecoder::new(f);
-            let mut z = BufReader::new(z);
-            z.read_until(0,&mut buf)
-                    .context("read header from .git/objects")
+                &object_hash[..2],
+                &object_hash[2..]
+            );
+            
+            let file = File::open(&path)?;
+            let decoder = ZlibDecoder::new(file);
+            let mut reader = BufReader::new(decoder);
+            
+            let mut header = Vec::new();
+            reader.read_until(0, &mut header)?;
 
 
          }
